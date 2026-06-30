@@ -10,8 +10,8 @@ print("Negative Indexing", arr[-2])
 
 #Sorting
 
-arr_1D = np.array([1,2,3,4,6,5,9,8,7])
-print("Sorted Array " ,np.sort(arr_1D))
+'''arr_1D = np.array([1,2,3,4,6,5,9,8,7])
+print("Sorted Array " ,np.sort(arr_1D))'''
 
 
 # axis ==0 column and axis=1 for row arrangement
@@ -36,6 +36,60 @@ print("mask filter",numbers[mask])
 
 #Fancy indexing and where method
 
-numbers = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-
+'''numbers = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 indices = [0,2,4]
+'''
+#print(numbers[indices])
+'''
+where_result = np.where(numbers > 5)
+print("where",numbers[where_result])
+where_result = np.where(numbers < 5)
+print("where",numbers[where_result])
+
+condition_check = np.where(numbers > 5 , "true" ,"false")
+print("condotion array",condition_check)'''
+
+
+'''arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+print("arr 1",arr1)
+print("arr 2",arr2)
+new_arr=np.concatenate((arr1,arr2))
+print("new added arr",new_arr)
+print("new added arr reshape",new_arr.reshape(2,3))
+
+'''
+
+'''a = np.array([1, 2, 3])
+b = np.array([4, 5, 6, 7])
+c = np.array([7, 8, 9])
+
+print("shape of A",a.shape)
+print("shape of B",b.shape)
+print("shape of C",c.shape)
+
+print("Comatibility",a.shape == b.shape )
+'''
+
+
+'''
+original = np.array([[1, 2], [3, 4]])
+new_row = np.array([[5, 6],[10,11]])
+
+added_row = np.vstack((original,new_row))
+#print("New arr",added_row)
+
+new_col = np.array([[78],[56]])
+
+add_col = np.hstack((original,new_col))
+print("original",original)
+print("new col add arr",add_col)'''
+
+
+#delete
+'''
+arr = np.array([1,2,3,4,5,6])
+mask = np.where(arr==4)
+delete = np.delete(arr,[mask])
+print("deleted Array",delete)
+'''
