@@ -35,4 +35,10 @@ print("Avg",avg_Sale)
 cumsum = np.cumsum(sales_data[:, 1:], axis=1)
 print("Cumulative sum",cumsum)
 
-
+plt.figure(figsize=(6,10))
+plt.plot(np.mean(cumsum,axis=0))
+plt.title("Graph representation")
+plt.xlabel("years")
+plt.ylabel("Sales")
+plt.grid("true")
+plt.show()
