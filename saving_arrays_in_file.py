@@ -17,11 +17,27 @@ np.save("arr3.npy",arr3)
 '''print_Saved_arr = np.load("arr1.npy")
 print("Saved arr",print_Saved_arr)
 '''
-load_image =  plb.imread("npy_logo.png")
+'''load_image =  np.load("numpy_logo.npy")
 
 
 plb.figure(figsize=(6,10))
 plb.subplot(121)
 plb.imshow(load_image)
-plb.grid(False)
+plb.grid(False)'''
+import os
 
+from PIL import Image
+import numpy as np
+
+img = Image.open("numpy-logo.png")
+arr = np.array(img)
+
+np.save("numpy-logo.npy", arr)
+logo = np.load('numpy-logo.npy')
+
+    # Display
+plt.figure(figsize=(10, 5))
+plt.subplot(121)
+plt.imshow(logo)
+plt.title("Numpy logo")
+plt.grid(False)
