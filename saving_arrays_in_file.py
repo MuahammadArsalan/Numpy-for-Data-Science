@@ -17,27 +17,36 @@ np.save("arr3.npy",arr3)
 '''print_Saved_arr = np.load("arr1.npy")
 print("Saved arr",print_Saved_arr)
 '''
-'''load_image =  np.load("numpy_logo.npy")
 
 
-plb.figure(figsize=(6,10))
-plb.subplot(121)
-plb.imshow(load_image)
-plb.grid(False)'''
-import os
+
 
 from PIL import Image
 import numpy as np
 
-img = Image.open("numpy-logo.png")
-arr = np.array(img)
 
-np.save("numpy-logo.npy", arr)
-logo = np.load('numpy-logo.npy')
+
+
+
+try:
+    img = Image.open("numpy_logo.png")
+    arr = np.array(img)
+
+    np.save("numpy_logo.npy", arr)
+    Logo_Load = np.load('numpy_logo.npy')
+
+    Logo_Load = np.load('numpy-logo.npy')
 
     # Display
-plt.figure(figsize=(10, 5))
-plt.subplot(121)
-plt.imshow(logo)
-plt.title("Numpy logo")
-plt.grid(False)
+    plb.figure(figsize=(10, 5))
+    plb.subplot(121)
+    plb.show(Logo_Load)
+    plb.title("Numpy logo")
+    plb.grid(False)
+    plb.show()
+    #dark_logo = 1 - logo
+
+
+
+except FileNotFoundError:
+    print("numpy logo file not found")
