@@ -18,7 +18,7 @@ print(" Sample data for 1st 3 restau: ",sales_data[0:3])
 
 # total sales per year
 
-total_sell = np.sum(sales_data[0:,1:],axis=0)
+'''total_sell = np.sum(sales_data[0:,1:],axis=0)
 print("Total sales",total_sell)
 
 # Minimum sales per restaurant
@@ -42,3 +42,29 @@ plt.xlabel("years")
 plt.ylabel("Sales")
 plt.grid("true")
 plt.show()
+
+
+'''
+'''vector1 = np.array([1, 2, 3, 4, 5])
+vector2 = np.array([6, 7, 8, 9, 10])
+
+print("Addition of vector",vector1+vector2)
+print("Multiplication of vector",vector1*vector2)
+print("Dot product of vector",np.dot(vector1,vector2))
+
+angle = np.arccos(np.dot(vector1,vector2) / np.linalg.norm(vector1*np.linalg.norm(vector2)))
+print("Angle",angle)
+'''
+
+
+
+restaurant_types = np.array(['biryani', 'chinese', 'pizza', 'burger', 'cafe'])
+vectorized = np.vectorize(str.upper)
+print("Vectorized Upper Case", vectorized(restaurant_types))
+
+#here 12 is scale it indivisually divide by all element called broadcasting
+
+
+avg_mont_sale = sales_data[0:,1:] /12
+print("Avg month sale",avg_mont_sale)
+
